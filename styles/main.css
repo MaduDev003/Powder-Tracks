@@ -1,0 +1,7 @@
+main {
+    flex: 1;
+    background-image: url('../assets/jinx.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
