@@ -1,6 +1,31 @@
 footer {
     display: flex;
-    width: 100%;
+    position: relative;
+}
+
+.music__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 40%;
+    background: linear-gradient(90deg, #b0f1d3,#96f3e3);
+}
+
+.music__progress::before {
+    content: '';
+    display: block;
+    position: absolute; 
+    right: 0; 
+    top: 50%; 
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--secondary);
+    transform: translate(50%, -50%); 
+     box-shadow: 0 0 10px 5px rgba(107, 236, 193, 0.5); 
+    filter: blur(0.2px); 
 }
 
 .footer__content {
@@ -11,7 +36,7 @@ footer {
     width: 100%;
     margin: auto 35px;
     height: 55px;
-    max-width: 1720px; 
+    max-width: 1720px;
 
 }
 
@@ -21,26 +46,26 @@ footer {
     gap: 15px;
 }
 
-.music svg{
+.music svg {
     width: 23px;
     height: 23px;
     border-radius: 5px;
-    
+
 }
 
-.music__details{
+.music__details {
     display: flex;
     flex-direction: column;
     gap: 1px;
 }
 
-.music__details h3{
+.music__details h3 {
     font-size: 1.200rem;
     font-weight: 400;
     color: var(--tertiary);
 }
 
-.music__details p{
+.music__details p {
     margin-left: 2px;
     font-size: 1.125rem;
     font-weight: 300;
@@ -48,7 +73,7 @@ footer {
 }
 
 .music svg:hover {
-  filter: brightness(0.9);
+    filter: brightness(0.9);
 }
 
 .music__controls {
@@ -73,17 +98,18 @@ footer {
     width: 25px;
     height: 25px;
 }
-.music__controls button:nth-child(3)  {
+
+.music__controls button:nth-child(3) {
     border-radius: 50%;
     height: 40px;
     width: 40px;
     background-color: #232323;
-    border: 1px solid #4d4b4b; 
-   
+    border: 1px solid #4d4b4b;
+
 }
 
 .music__controls button:nth-child(3) svg {
-  margin-left: 3px;
+    margin-left: 3px;
 }
 
 .music__controls button svg {
@@ -92,11 +118,11 @@ footer {
 }
 
 .music__controls button:hover {
-  filter: brightness(0.9);
+    filter: brightness(0.9);
 }
 
 .footer__content button:hover svg {
-  filter: brightness(1.1);
+    filter: brightness(1.1);
 }
 
 
