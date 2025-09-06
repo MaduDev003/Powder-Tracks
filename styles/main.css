@@ -11,7 +11,7 @@ main {
 .main__content {
     width: 100%;
     max-width: 1440px;
-    margin: 325px 60px auto;
+    margin: 260px 60px auto;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -35,14 +35,12 @@ main {
   display: flex;
   align-items: center;
   column-gap: 15px;
+  margin-top: 12px;
 
 }
 
 .controls button {
   display: flex;
-
-  width: 35x;
-  height: 35px;
   border-radius: 50%;
 
   background: var(--tertiary);

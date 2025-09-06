@@ -1,5 +1,5 @@
 footer {
-     display: flex;
+    display: flex;
     width: 100%;
 }
 
@@ -7,10 +7,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 26px;
+    padding: 28px;
     width: 100%;
+    margin: auto 35px;
     height: 55px;
-    max-width: 1720px;
+    max-width: 1720px; 
 
 }
 
@@ -24,8 +25,83 @@ footer {
     width: 23px;
     height: 23px;
     border-radius: 5px;
+    
 }
 
+.music svg:hover {
+  filter: brightness(0.9);
+}
+
+.music__controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.music__controls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+
+    background: var(--background);
+}
+
+.music__controls svg {
+    width: 25px;
+    height: 25px;
+}
 .music__controls button:nth-child(3)  {
-    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: #232323;
+    border: 1px solid #4d4b4b; 
+   
+}
+
+.music__controls button:nth-child(3) svg {
+  margin-left: 3px;
+}
+
+.music__controls button svg {
+    width: 22px;
+    height: 22px;
+}
+
+.music__controls button:hover {
+  filter: brightness(0.9);
+}
+
+.footer__content button:hover svg {
+  filter: brightness(1.1);
+}
+
+
+.config_controlls {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.config_controlls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+
+    background: var(--background);
+}
+
+
+.config_controlls svg {
+    width: 25px;
+    height: 25px;
 }
