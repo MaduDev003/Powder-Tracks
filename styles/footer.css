@@ -28,6 +28,25 @@ footer {
     
 }
 
+.music__details{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.music__details h3{
+    font-size: 1.200rem;
+    font-weight: 400;
+    color: var(--tertiary);
+}
+
+.music__details p{
+    margin-left: 2px;
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: var(--primary);
+}
+
 .music svg:hover {
   filter: brightness(0.9);
 }
