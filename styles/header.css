@@ -1,19 +1,20 @@
 header {
     display: flex;
     width: 100%;
+
 }
 
 .header__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    
+    padding: 28px;
     width: 100%;
-    padding: 30px;
-    margin: 0 auto;
+    margin: auto 35px;
     height: 55px;
-    max-width: 1440px;
 }
+
 
 h1 {
     font-size: 1.5rem;
@@ -108,4 +109,19 @@ input[type="search"]::-webkit-search-cancel-button {
     height: 100%;
    border-radius: 50%;
     object-fit: cover;
+}
+
+@media(max-width: 1080px) {
+  .header__content {
+    margin: auto 15px;
+    height: 75px;
+    justify-content: center;
+    gap: 23px;
+  }
+
+  .links{
+    margin-left: 12px;
+    column-gap: 25px;
+  }
+
 }

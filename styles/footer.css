@@ -150,3 +150,10 @@ footer {
     width: 25px;
     height: 25px;
 }
+
+@media(max-width: 1080px) {
+  .footer__content {
+    height: 75px;
+  }
+
+}
