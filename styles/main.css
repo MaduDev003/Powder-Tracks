@@ -9,26 +9,26 @@ main {
 }
 
 .main__content {
-    width: 100%;
-    max-width: 1440px;
-    margin: 260px 60px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 260px 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .main__content h2 {
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: 9px;
-    color: var(--tertiary);
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 9px;
+  color: var(--tertiary);
 }
 
 .main__content p {
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--primary);
-  
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--primary);
+
 }
 
 .controls {
@@ -49,6 +49,7 @@ main {
 .controls button:disabled {
   background: #acaaaa;
 }
+
 .controls button:hover {
   filter: brightness(0.9);
 }
@@ -65,7 +66,35 @@ main {
 
 @media(max-width: 1080px) {
   .main__content {
-     margin: 435px 60px auto;
+    margin: 430px 60px auto;
   }
+
+  .main__content h2 {
+    font-size: 3rem;
+    letter-spacing: 7px;
+  }
+
+  .main__content p {
+    font-size: 1.55rem;
+  }
+
+  .controls button {
+    width: 45px;
+    height: 45px;
+
+  }
+
+  .controls span {
+    font-size: 1.55rem;
+    font-weight: 300;
+    color: var(--primary);
+  }
+
+  .controls button svg {
+    width: 44px;
+    height: 44px;
+  }
+
+
 
 }
