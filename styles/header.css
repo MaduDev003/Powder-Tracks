@@ -8,7 +8,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     padding: 28px;
     width: 100%;
     margin: auto 35px;
@@ -19,10 +19,10 @@ header {
 h1 {
     font-size: 1.5rem;
     font-weight: 400;
-    background: linear-gradient(90deg, #34FA9D,#96f3e3);
+    background: linear-gradient(90deg, #34FA9D, #96f3e3);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; 
+    color: transparent;
 }
 
 li a {
@@ -45,18 +45,18 @@ input:focus {
     color: var(--tertiary);
 
     border: 1px solid var(--secondary);
-   
+
 }
 
 input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 
-  height: 16px;
-  width: 16px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FFFFFF"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>');
-  background-repeat: no-repeat;
-  cursor: pointer;
-  margin-right: 20px;
+    height: 16px;
+    width: 16px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FFFFFF"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>');
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-right: 20px;
 }
 
 
@@ -72,16 +72,16 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .links li.active::before {
-  content: '';
+    content: '';
 
-  position: absolute;
-  bottom: 0;
-  left: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
-  width: 100%;
-  height: 2px;
-  transform: translateY(6px);
-  background: var(--secondary);
+    width: 100%;
+    height: 2px;
+    transform: translateY(6px);
+    background: var(--secondary);
 }
 
 .user__profile {
@@ -107,21 +107,38 @@ input[type="search"]::-webkit-search-cancel-button {
 .user__avatar img {
     width: 100%;
     height: 100%;
-   border-radius: 50%;
+    border-radius: 50%;
     object-fit: cover;
 }
 
+
 @media(max-width: 1080px) {
-  .header__content {
-    margin: auto 15px;
-    height: 75px;
-    justify-content: center;
-    gap: 23px;
+    .header__content {
+        margin: auto 15px;
+        height: 75px;
+        justify-content: center;
+        gap: 23px;
+    }
+
+    .links {
+        margin-left: 12px;
+        column-gap: 25px;
+    }
+
+      input {
+    width: 265px;
   }
 
-  .links{
-    margin-left: 12px;
-    column-gap: 25px;
-  }
+ 
 
 }
+
+
+
+
+
+
+
+
+
+
