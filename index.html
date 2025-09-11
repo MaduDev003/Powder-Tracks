@@ -8,12 +8,12 @@
     <title>Powder Tracks</title>
     <meta name="description" content="Radio Music Arcane" />
 
-   <script src="/Powder_Tracks/scripts/svg-inject.min.js"></script>
+    <script src="/scripts/svg-inject.min.js"></script>
 
     <link rel="stylesheet" href="./styles/global.css" />
     <script>
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/Powder_Tracks/service-worker.js')
+            navigator.serviceWorker.register('./service-worker.js')
                 .then(() => console.log('Service Worker registrado!'))
                 .catch(err => console.error('Erro ao registrar SW', err));
         }
