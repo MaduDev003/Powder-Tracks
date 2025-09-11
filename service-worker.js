@@ -16,7 +16,7 @@ const FILES_TO_CACHE = [
   './assets/icons/repeat.svg',
   './assets/icons/volume.svg',
   './assets/jinx.png',
-  './assets/user.jpeg',
+  './assets/user.jpg',
   './assets/fonts/GT-Eesti-Display-Medium.otf',
   './assets/fonts/GT-Eesti-Display-Regular.otf'
 ];
