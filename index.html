@@ -13,11 +13,9 @@
     <link rel="stylesheet" href="./styles/global.css" />
     <script>
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(reg => console.log('Service Worker registrado:', reg.scope))
-                    .catch(err => console.log('Falha ao registrar SW:', err));
-            });
+            navigator.serviceWorker.register('./service-worker.js')
+                .then(() => console.log('Service Worker registrado!'))
+                .catch(err => console.error('Erro ao registrar SW', err));
         }
     </script>
 </head>
