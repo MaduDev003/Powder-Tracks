@@ -40,6 +40,12 @@ footer {
 
 }
 
+.player{
+    display: flex;
+     align-items: center;
+    gap: 7px;
+}
+
 .music {
     display: flex;
     align-items: center;
@@ -82,7 +88,7 @@ footer {
     gap: 15px;
 }
 
-.music__controls button {
+.music__controls button  {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,7 +105,7 @@ footer {
     height: 25px;
 }
 
-.music__controls button:nth-child(3) {
+.music__controls .player button:nth-child(2) {
     border-radius: 50%;
     height: 40px;
     width: 40px;
@@ -108,13 +114,13 @@ footer {
 
 }
 
-.music__controls button:nth-child(3) svg {
+.music__controls .player button:nth-child(2) svg {
     margin-left: 3px;
 }
 
-.music__controls button svg {
-    width: 22px;
-    height: 22px;
+.music__controls .player button svg {
+    width: 25px;
+    height: 25px;
 }
 
 .music__controls button:hover {
@@ -152,7 +158,43 @@ footer {
 }
 
 @media(max-width: 1080px) {
+    .footer__content {
+        height: 75px;
+    }
+}
+
+@media (max-width: 720px) {
+  footer {
+    width: 100vw;
+    height: auto; 
+    padding-bottom: 20px;
+  }
+
   .footer__content {
-    height: 75px;
+    display: flex;               
+    flex-direction: column;      
+    align-items: center;       
+    justify-content: center;
+    padding: 12px;
+    gap: 20px;                 
+    height: auto;   
+    margin: 5px;            
+  }
+
+  .music {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .music__controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; 
+    width: 100%;
+  }
+
+  .config_controlls {
+    display: none;
   }
 }

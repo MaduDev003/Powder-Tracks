@@ -14,7 +14,8 @@ main {
   margin: 260px 60px auto;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 5px
+
 }
 
 .main__content h2 {
@@ -64,9 +65,10 @@ main {
   color: var(--primary);
 }
 
-@media(max-width: 1080px) {
+
+@media (max-width: 2156px) and (min-height: 876px) {
   .main__content {
-    margin: 430px 60px auto;
+    margin: 540px 60px auto;
   }
 
   .main__content h2 {
@@ -76,6 +78,10 @@ main {
 
   .main__content p {
     font-size: 1.55rem;
+  }
+
+  .controls {
+      margin-bottom: 23px;
   }
 
   .controls button {
@@ -94,6 +100,7 @@ main {
     width: 44px;
     height: 44px;
   }
+
 
 
 
