@@ -1,8 +1,13 @@
 const CACHE_NAME = 'arcane-v1';
+
 const FILES_TO_CACHE = [
   './',
   './index.html',
-  './styles/global.css',   // só esse
+  './styles/global.css',
+  './styles/app.css',
+  './styles/header.css',
+  './styles/footer.css',
+  './styles/main.css',
   './scripts/svg-inject.min.js',
   './assets/icons/heart.svg',
   './assets/icons/minimize.svg',
