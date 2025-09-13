@@ -1,4 +1,4 @@
-const CACHE_NAME = 'arcane-v1';
+const CACHE_NAME = 'arcane-v2';
 
 const FILES_TO_CACHE = [
   './',
