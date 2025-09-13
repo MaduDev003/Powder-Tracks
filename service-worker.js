@@ -21,7 +21,8 @@ const FILES_TO_CACHE = [
   './assets/jinx.png',
   './assets/user.jpg',
   './fonts/GT-Eesti-Display-Medium.otf',
-  './fonts/GT-Eesti-Display-Regular.otf'
+  './fonts/GT-Eesti-Display-Regular.otf',
+  './scripts/svg-inject.min.js'
 ];
 
 self.addEventListener('install', event => {
