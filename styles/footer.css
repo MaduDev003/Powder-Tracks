@@ -178,13 +178,17 @@ footer {
     padding: 12px;
     gap: 20px;                 
     height: auto;   
-    margin: 5px;            
+    margin: 15px;            
   }
 
   .music {
     width: 100%;
     justify-content: space-between;
     flex-direction: row-reverse;
+  }
+
+  .music svg {
+    margin-right: 5px;
   }
 
   .music__controls {

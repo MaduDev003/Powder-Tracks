@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/main.css">
-    
+
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./service-worker.js')
@@ -29,7 +29,7 @@
     <div class="app">
         <header>
             <div class="header__content">
-
+                <img class="list" src="./assets/icons/list.svg" alt="Ìcone de listagem" onload="SVGInject(this)">
                 <h1>Powder Tracks</h1>
 
                 <nav>
@@ -48,12 +48,15 @@
                         </form>
                     </ul>
                 </nav>
+
                 <div class="user__profile">
                     <span>Maria Eduarda</span>
                     <div class="user__avatar">
                         <img src="./assets/user.jpg" alt="User Profile" />
                     </div>
                 </div>
+
+
             </div>
         </header>
         <main>
@@ -93,19 +96,20 @@
                         <img src="./assets/icons/random.svg" alt="Ícone pular para trás" onload="SVGInject(this)">
                     </button>
 
-                    <div class="player"> 
-                    <button type="button">
-                        <img src="./assets/icons/chevron-left.svg" alt="Ícone pular para trás" onload="SVGInject(this)">
-                    </button>
+                    <div class="player">
+                        <button type="button">
+                            <img src="./assets/icons/chevron-left.svg" alt="Ícone pular para trás"
+                                onload="SVGInject(this)">
+                        </button>
 
-                    <button type="button" class="play">
-                        <img src="./assets/icons/play.svg" alt="Ícone de play" onload="SVGInject(this)">
-                    </button>
+                        <button type="button" class="play">
+                            <img src="./assets/icons/play.svg" alt="Ícone de play" onload="SVGInject(this)">
+                        </button>
 
-                    <button type="button">
-                        <img src="./assets/icons/chevron-right.svg" alt="Ícone pular para frente"
-                            onload="SVGInject(this)">
-                    </button>
+                        <button type="button">
+                            <img src="./assets/icons/chevron-right.svg" alt="Ícone pular para frente"
+                                onload="SVGInject(this)">
+                        </button>
                     </div>
 
                     <button type="button">

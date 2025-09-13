@@ -25,6 +25,10 @@ h1 {
     color: transparent;
 }
 
+.list {
+    display: none;
+}
+
 li a {
     font-size: 1rem;
     font-weight: 300;
@@ -127,13 +131,49 @@ input[type="search"]::-webkit-search-cancel-button {
 
       input {
     width: 265px;
-  }
-
- 
+  } 
 
 }
 
 
+@media (max-width: 720px) {
+  header {
+    width: 100%;
+    height: auto; 
+  }
+
+  .header__content{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px; 
+    margin: auto auto; 
+    gap: 45px;           
+    
+  }
+
+  h1{
+    font-size: 1.445rem;
+  }
+
+  .header__content nav {
+    display: none;
+  }
+
+  .list {
+      display: flex;
+      width: 35px;
+      height: 35px;
+  }
+.user__profile span {
+    display: none;
+}
+
+.user__profile {
+    margin-left: 3px;
+}
+}
 
 
 
