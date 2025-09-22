@@ -26,20 +26,20 @@
     <div class="app">
         <header>
             <div class="header__content">
-                <img onclick="listLinksToggle()"  id="list" class="list" src="./assets/icons/list.svg" alt="Ìcone de listagem" onload="SVGInject(this)">
-                <img class="close" src="./assets/icons/close.svg" alt="Ícone de fechar" onload="SVGInject(this)" onclick="listLinksToggle()">
+                <img onclick="toggleListLinks()"  id="list" class="list" src="./assets/icons/list.svg" alt="Ìcone de listagem" onload="SVGInject(this)">
+                <img class="close" src="./assets/icons/close.svg" alt="Ícone de fechar" onload="SVGInject(this)" onclick="toggleListLinks()">
                 <h1>Powder Tracks</h1>
 
                 <nav>
-                    <ul class="links"> <!-- se por active, aciona o treco dos links -->
-                        <li class="active">
+                    <ul class="links" onclick="choosePage(event)"> <!-- se por active, aciona o treco dos links -->
+                        <li class="link">
                             <a href="/">Início</a>
                         </li>
-                        <li>
-                            <a href="/">Personagens</a>
+                        <li class="link">
+                            <a href="/personagens">Personagens</a>
                         </li>
-                        <li>
-                            <a href="/"> Minha playlist</a>
+                        <li class="link">
+                            <a href="/minha-play-list"> Minha playlist</a>
                         </li>
                         <form>
                             <input type="search" placeholder="Buscar..." />
