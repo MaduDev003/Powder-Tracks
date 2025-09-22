@@ -4,6 +4,10 @@ header {
 
 }
 
+.close {
+    display: none;
+}
+
 .header__content {
     display: flex;
     align-items: center;
