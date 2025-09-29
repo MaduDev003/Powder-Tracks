@@ -51,7 +51,7 @@
                     </ul>
                 </nav>
                 
-                <div class="user__profile" onclick="showUserInfo()">
+                <div class="user__profile">
                     <span>Maria Eduarda</span> 
                     <div class="user__avatar">
                         <img src="./assets/user.jpg" alt="User Profile" />
@@ -84,7 +84,7 @@
         </main>
         <footer>
             <div class="footer__content">
-                <span class="music__progress"></span>
+                <span id="music__progress"></span>
 
                 <div class="music">
                     <img src="./assets/icons/heart.svg" alt="Ícone de curtida" onload="SVGInject(this)">
@@ -104,8 +104,9 @@
                                 onload="SVGInject(this)">
                         </button>
 
-                        <button type="button" class="play">
-                            <img src="./assets/icons/play.svg" alt="Ícone de play" onload="SVGInject(this)">
+                        <button type="button" class="music__players play" onclick="playMusic()">
+                            <img src="./assets/icons/play.svg" class="play__music" alt="Ícone de play" onload="SVGInject(this)">
+                            <img src="./assets/icons/pause.svg" class="play__music" alt="Ícone de pause" onload="SVGInject(this)">
                         </button>
 
                         <button type="button">

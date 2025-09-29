@@ -3,29 +3,29 @@ footer {
     position: relative;
 }
 
-.music__progress {
+#music__progress {
     position: absolute;
     top: 0;
     left: 0;
     height: 2px;
-    width: 40%;
-    background: linear-gradient(90deg, #b0f1d3,#96f3e3);
+    width: 0;
+    background: linear-gradient(90deg, #b0f1d3, #96f3e3);
 }
 
-.music__progress::before {
+#music__progress::before {
     content: '';
     display: block;
-    position: absolute; 
-    right: 0; 
-    top: 50%; 
+    position: absolute;
+    right: 0;
+    top: 50%;
 
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background: var(--secondary);
-    transform: translate(50%, -50%); 
-     box-shadow: 0 0 10px 5px rgba(107, 236, 193, 0.5); 
-    filter: blur(0.2px); 
+    transform: translate(50%, -50%);
+    box-shadow: 0 0 10px 5px rgba(107, 236, 193, 0.5);
+    filter: blur(0.2px);
 }
 
 .footer__content {
@@ -40,9 +40,9 @@ footer {
 
 }
 
-.player{
+.player {
     display: flex;
-     align-items: center;
+    align-items: center;
     gap: 7px;
 }
 
@@ -88,7 +88,7 @@ footer {
     gap: 15px;
 }
 
-.music__controls button  {
+.music__controls button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,6 +99,19 @@ footer {
 
     background: var(--background);
 }
+
+.music__players svg {
+    display: none;
+}
+
+.music__players.play svg:nth-child(1) {
+    display: block;
+}
+
+.music__players.pause svg:nth-child(2) {
+    display: block;
+}
+
 
 .music__controls svg {
     width: 25px;
@@ -122,6 +135,8 @@ footer {
     width: 25px;
     height: 25px;
 }
+
+
 
 .music__controls button:hover {
     filter: brightness(0.9);
@@ -164,43 +179,41 @@ footer {
 }
 
 @media (max-width: 720px) {
-  footer {
-    width: 100vw;
-    height: auto; 
-    padding-bottom: 20px;
-  }
+    footer {
+        width: 100vw;
+        height: auto;
+        padding-bottom: 20px;
+    }
 
-  .footer__content {
-    display: flex;               
-    flex-direction: column;      
-    align-items: center;       
-    justify-content: center;
-    padding: 12px;
-    gap: 20px;                 
-    height: auto;   
-    margin: 15px;            
-  }
+    .footer__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        gap: 20px;
+        height: auto;
+        margin: 15px;
+    }
 
-  .music {
-    width: 100%;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-  }
+    .music {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
 
-  .music svg {
-    margin-right: 5px;
-  }
+    .music svg {
+        margin-right: 5px;
+    }
 
-  .music__controls {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px; 
-    width: 100%;
-  }
+    .music__controls {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        width: 100%;
+    }
 
-  .config_controlls {
-    display: none;
-  }
+    .config_controlls {
+        display: none;
+    }
 }
-
-
