@@ -41,10 +41,6 @@
                         </li>
                          <hr>
                         <li class="link">
-                            <a href="/personagens">Personagens</a>
-                        </li>
-                         <hr>
-                        <li class="link">
                             <a href="/minha-play-list"> Minha playlist</a>
                         </li>
                        
@@ -64,7 +60,7 @@
         <main>
             <div class="main__content">
                 <h2>Arcane</h2>
-                <p>Riot Games</p>
+                <p class="artists">Riot Games</p>
 
                 <div class="controls">
                     <button type="button">
@@ -95,28 +91,28 @@
                 </div>
                 <div class="music__controls">
                     <button type="button">
-                        <img src="./assets/icons/random.svg" alt="Ícone pular para trás" onload="SVGInject(this)">
+                        <img src="./assets/icons/random.svg" alt="Ícone escolher uma música aleatória" onload="SVGInject(this)">
                     </button>
 
                     <div class="player">
-                        <button type="button">
-                            <img src="./assets/icons/chevron-left.svg" alt="Ícone pular para trás"
+                        <button type="button" onclick="changeMusic(-1)">
+                            <img src="./assets/icons/chevron-left.svg" alt="Ícone mudar para música anterior"
                                 onload="SVGInject(this)">
                         </button>
 
                         <button type="button" class="music__players play" onclick="playMusic()">
-                            <img src="./assets/icons/play.svg" class="play__music" alt="Ícone de play" onload="SVGInject(this)">
-                            <img src="./assets/icons/pause.svg" class="play__music" alt="Ícone de pause" onload="SVGInject(this)">
+                            <img src="./assets/icons/play.svg" alt="Ícone de iniciar a música" onload="SVGInject(this)">
+                            <img src="./assets/icons/pause.svg" alt="Ícone de pausar a música" onload="SVGInject(this)">
                         </button>
 
-                        <button type="button">
-                            <img src="./assets/icons/chevron-right.svg" alt="Ícone pular para frente"
+                        <button type="button" onclick="changeMusic(1)">
+                            <img src="./assets/icons/chevron-right.svg" alt="Ícone mudar para próxima música"
                                 onload="SVGInject(this)">
                         </button>
                     </div>
 
                     <button type="button">
-                        <img src="./assets/icons/repeat.svg" alt="Ícone pular para trás" onload="SVGInject(this)">
+                        <img src="./assets/icons/repeat.svg" alt="Ícone de repetir a música atual" onload="SVGInject(this)">
                     </button>
                 </div>
                 <div class="config_controlls">

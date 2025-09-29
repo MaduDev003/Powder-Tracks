@@ -1,3 +1,19 @@
+
+const MAX_TIME = 100; // expand width of music progress bar
+let isPlaying = false;
+let musicTimer = 0;
+let timeEvent = null;
+
+let music = 0;
+let musics = [] // current music index
+
+
+fetch("../musics.json").then(response => response.json()).then(data => {
+  musics = data
+  TOTAL_MUSICS = data.length
+  changeMusic(0)
+});
+
 function toggleListLinks() {
     const links = document.querySelector('.links');
     const closeLinks = document.querySelector('.close');
@@ -20,10 +36,6 @@ function choosePage(event) {
     clickedLi.classList.add('active');
 }
 
-const MAX_TIME = 100; // 4 minutes in seconds
-let isPlaying = false;
-let musicTimer = 0;
-let timeEvent = null;
 
 function changeIconButtonToPlay() {
     const musicPlayer = document.querySelector('.music__players');
@@ -54,23 +66,42 @@ function resetMusic() {
     musicTimer = 0;
 }
 
+function increaseMusicProgress() {
+    const musicProgress = document.getElementById('music__progress');
+    musicProgress.style.width = `${musicTimer}%`;
+}
+
 function playMusic() {
     isPlaying = !isPlaying;
     changeIconButtonToPlay();
 
     if (isPlaying) {
-        const musicProgress = document.getElementById('music__progress');
+        
         timeEvent = setInterval(() => {
             if (musicTimer >= MAX_TIME) {
               resetMusic();
             }
             
             musicTimer++
-            musicProgress.style.width = `${musicTimer}%`;
+           increaseMusicProgress();
         }, 500);
     } else {
         clearInterval(timeEvent);
     }
+}
+
+function changeMusic(direction){
+    music += direction;
+    if(music < 0) music = musics.length - 1;
+    if(music >= musics.length - 1) music = 0;
+
+    musicTimer = 0;
+    increaseMusicProgress();
+ 
+    console.log("música atual",musics[music])
+
+    document.querySelector('h2').innerHTML = musics[music].name;
+    document.querySelector('.artists').innerHTML = musics[music].artist;
 }
 
 
