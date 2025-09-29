@@ -19,3 +19,5 @@ function choosePage(event) {
     allLinks.forEach(link => link.classList.remove('active'));
     clickedLi.classList.add('active');
 }
+
+

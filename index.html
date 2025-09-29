@@ -32,23 +32,27 @@
 
                 <nav>
                     <ul class="links" onclick="choosePage(event)"> <!-- se por active, aciona o treco dos links -->
-                        <li class="link">
-                            <a href="/">Início</a>
-                        </li>
-                        <li class="link">
-                            <a href="/personagens">Personagens</a>
-                        </li>
-                        <li class="link">
-                            <a href="/minha-play-list"> Minha playlist</a>
-                        </li>
                         <form>
                             <input type="search" placeholder="Buscar..." />
                         </form>
+                        <hr>
+                        <li class="link">
+                            <a href="/">Início</a>
+                        </li>
+                         <hr>
+                        <li class="link">
+                            <a href="/personagens">Personagens</a>
+                        </li>
+                         <hr>
+                        <li class="link">
+                            <a href="/minha-play-list"> Minha playlist</a>
+                        </li>
+                       
                     </ul>
                 </nav>
-
-                <div class="user__profile">
-                    <span>Maria Eduarda</span>
+                
+                <div class="user__profile" onclick="showUserInfo()">
+                    <span>Maria Eduarda</span> 
                     <div class="user__avatar">
                         <img src="./assets/user.jpg" alt="User Profile" />
                     </div>
