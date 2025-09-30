@@ -1,17 +1,53 @@
 
-const MAX_TIME = 100; // expand width of music progress bar
+const MAX_TIME = 100; 
 let isPlaying = false;
 let musicTimer = 0;
 let timeEvent = null;
 
 let music = 0;
-let musics = [] // current music index
+let musics = [] 
 
+function increaseMusicProgress() {
+    const musicProgress = document.getElementById('music__progress');
+    musicProgress.style.width = `${musicTimer}%`;
+}
+
+function changeMusic(direction) {
+    music += direction;
+   
+    if (music < 0) {
+        music = musics.length - 1; 
+    }
+    if (music >= musics.length) {
+        music = 0; 
+    }
+
+    musicTimer = 0;
+    increaseMusicProgress();
+
+    console.log("música atual", musics[music])
+
+    const musicCounter = document.getElementById('music__counter');
+    musicCounter.innerHTML = `${music + 1} / ${musics.length}`;
+
+    document.querySelector('h2').innerHTML = musics[music].name;
+    document.querySelector('.artists').innerHTML = musics[music].artist;
+    document.querySelector('h3').innerHTML = musics[music].name;
+    document.querySelector('.music__details p').innerHTML = musics[music].artist;
+
+    const heart = document.getElementById('heart');
+    if (musics[music].liked) {
+        heart.classList.add('liked');
+    } else {
+        heart.classList.remove('liked');
+    }
+
+}
 
 fetch("../musics.json").then(response => response.json()).then(data => {
-  musics = data
-  TOTAL_MUSICS = data.length
-  changeMusic(0)
+    musics = data
+    TOTAL_MUSICS = data.length
+    changeMusic(0)
 });
 
 function toggleListLinks() {
@@ -19,7 +55,6 @@ function toggleListLinks() {
     const closeLinks = document.querySelector('.close');
     const listLinks = document.querySelector('.list');
 
-    // Toggle menu mobile
     closeLinks.classList.toggle('active');
     listLinks.classList.toggle('active');
     links.classList.toggle('active');
@@ -48,27 +83,12 @@ function changeIconButtonToPlay() {
     }
 }
 
-function changeIconButtonToPause() {
-    const musicPlayer = document.querySelector('.music__players');
-    if (isPlaying) {
-        musicPlayer.classList.remove('play')
-        musicPlayer.classList.add('pause')
-    } else {
-        musicPlayer.classList.remove('pause')
-        musicPlayer.classList.add('play')
-    }
-}
-
 function resetMusic() {
     clearInterval(timeEvent);
     changeIconButtonToPlay();
+    changeMusic(1);
     isPlaying = false;
     musicTimer = 0;
-}
-
-function increaseMusicProgress() {
-    const musicProgress = document.getElementById('music__progress');
-    musicProgress.style.width = `${musicTimer}%`;
 }
 
 function playMusic() {
@@ -76,33 +96,43 @@ function playMusic() {
     changeIconButtonToPlay();
 
     if (isPlaying) {
-        
+
         timeEvent = setInterval(() => {
             if (musicTimer >= MAX_TIME) {
-              resetMusic();
+                resetMusic();
             }
-            
+
             musicTimer++
-           increaseMusicProgress();
+            increaseMusicProgress();
         }, 500);
     } else {
         clearInterval(timeEvent);
     }
 }
 
-function changeMusic(direction){
-    music += direction;
-    if(music < 0) music = musics.length - 1;
-    if(music >= musics.length - 1) music = 0;
+function likeMusic() {
+    musics[music].liked = !musics[music].liked;
 
-    musicTimer = 0;
-    increaseMusicProgress();
- 
-    console.log("música atual",musics[music])
+    const heart = document.getElementById('heart');
 
-    document.querySelector('h2').innerHTML = musics[music].name;
-    document.querySelector('.artists').innerHTML = musics[music].artist;
+    if (musics[music].liked) {
+        heart.classList.add('liked');
+    } else {
+        heart.classList.remove('liked');
+    }
 }
 
 
-/* .music__progress -> nome da classe da barrinha da musica  */
+const eventsCode = {
+    Space: () => playMusic(),
+    ArrowRight: () =>  changeMusic(1),
+    ArrowLeft: () => changeMusic(-1)
+}
+
+
+document.addEventListener('keydown', (event) => {
+    const { code } = event;
+    eventsCode[code]();
+});
+
+

@@ -28,6 +28,16 @@ footer {
     filter: blur(0.2px);
 }
 
+#heart path {
+    fill: #454444;
+    stroke:  #454444;
+}
+
+#heart.liked path {
+    fill: #EB4848;
+    stroke:  #EB4848;
+}
+
 .footer__content {
     display: flex;
     align-items: center;
@@ -63,6 +73,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1px;
+    width: 280px;
 }
 
 .music__details h3 {
@@ -72,7 +83,6 @@ footer {
 }
 
 .music__details p {
-    margin-left: 2px;
     font-size: 1.125rem;
     font-weight: 300;
     color: var(--primary);

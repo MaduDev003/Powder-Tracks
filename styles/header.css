@@ -95,7 +95,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .user__profile {
     display: flex;
     align-items: center;
-    column-gap: 5px;
+    column-gap: 7px;
 }
 
 .user__profile span {
@@ -124,7 +124,6 @@ input[type="search"]::-webkit-search-cancel-button {
     .header__content {
         margin: auto 15px;
         height: 75px;
-        justify-content: center;
         gap: 23px;
     }
 

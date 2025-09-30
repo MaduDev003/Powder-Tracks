@@ -1,38 +1,52 @@
 [
     {
         "name": "Guns for Hire",
-        "artist": "Woodkid"
+        "artist": "Woodkid",
+        "liked": false
     },
     {
         "name": "The Line",
-        "artist": "Twenty One Pilots"
+        "artist": "Twenty One Pilots",
+        "liked": false
     },
     {
         "name": "Enemy",
-        "artist": "Imagine Dragons"
+        "artist": "Imagine Dragons",
+        "liked": false
     },
     {
         "name": "Playground",
-        "artist": "Bea Millers"
+        "artist": "Bea Millers",
+        "liked": false
     },
     {
         "name": "Ma Meilleure Ennemie",
-        "artist": "Stromae & Pomme"
+        "artist": "Stromae & Pomme",
+        "liked": false
     },
     {
         "name": "Our Love",
-        "artist": "Curtis Harding ft. Jazmine Sullivan"
+        "artist": "Curtis Harding ft. Jazmine Sullivan",
+        "liked": false
     },
     {
         "name": "What Could Have Been",
-        "artist": "Sting"
+        "artist": "Sting",
+        "liked": false
     },
     {
         "name": "Paint The Town Blue",
-        "artist": "Ashnikko"
+        "artist": "Ashnikko",
+        "liked": false
     },
     {
         "name": "Remember Me",
-        "artist": "d4vd"
+        "artist": "d4vd",
+        "liked": false
+    },
+     {
+        "name": "Dynasties & Dystopia",
+        "artist": "Denzel Curry, Gizzle, Bren Joy",
+        "liked": false
     }
 ]
