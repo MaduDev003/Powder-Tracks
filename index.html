@@ -12,14 +12,6 @@
 
     <link rel="stylesheet" href="./styles/global.css" />
 
-
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./service-worker.js')
-                .then(() => console.log('Service Worker registrado!'))
-                .catch(err => console.error('Erro ao registrar SW', err));
-        }
-    </script>
 </head>
 
 <body>
@@ -31,7 +23,7 @@
                 <h1>Powder Tracks</h1>
 
                 <nav>
-                    <ul class="links" onclick="choosePage(event)"> <!-- se por active, aciona o treco dos links -->
+                    <ul class="links" onclick="choosePage(event)"> 
                          <li class="link">
                             <a href="/">Início</a>
                         </li>
