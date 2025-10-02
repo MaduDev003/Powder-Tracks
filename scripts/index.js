@@ -27,7 +27,7 @@ function changeMusic(direction) {
 
 
     const musicCounter = document.getElementById('music__counter');
-    musicCounter.innerHTML = `${music + 1} / ${musics.length}`; /*  arrumar para tirar o music */
+    musicCounter.innerHTML = `${music + 1} / ${musics.length}`; 
 
     document.querySelector('h2').innerHTML = musics[music].name;
     document.querySelector('.artists').innerHTML = musics[music].artist;
