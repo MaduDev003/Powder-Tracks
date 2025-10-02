@@ -25,10 +25,9 @@ function changeMusic(direction) {
     musicTimer = 0;
     increaseMusicProgress();
 
-    console.log("música atual", musics[music])
 
     const musicCounter = document.getElementById('music__counter');
-    musicCounter.innerHTML = `${music + 1} / ${musics.length}`;
+    musicCounter.innerHTML = `${music + 1} / ${musics.length}`; /*  arrumar para tirar o music */
 
     document.querySelector('h2').innerHTML = musics[music].name;
     document.querySelector('.artists').innerHTML = musics[music].artist;
@@ -92,8 +91,9 @@ function resetMusic() {
 }
 
 function playMusic() {
-    isPlaying = !isPlaying;
+    isPlaying = !isPlaying;   
     changeIconButtonToPlay();
+
 
     if (isPlaying) {
 
@@ -136,3 +136,9 @@ document.addEventListener('keydown', (event) => {
 });
 
 
+
+function repeatMusic(){
+    musicTimer = 0;       
+    increaseMusicProgress();
+    playMusic();      
+}
