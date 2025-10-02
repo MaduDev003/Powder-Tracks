@@ -13,7 +13,7 @@
 O **Powder Tracks** é um aplicativo de música desenvolvido para praticar conceitos de **responsividade** e **funções em JavaScript**.  
 O design é inspirado na personagem **Powder/Jinx**, da série *Arcane* criada pela **Riot Games** em parceria com o estúdio **Fortiche Production**.  
 
-> ⚠️ Por motivos de direitos autorais, o projeto **não possui as músicas originais**, apenas os nomes das faixas e seus intérpretes.  
+> ⚠️ Por motivos de direitos autorais, o projeto **não possui músicas**, apenas os nomes das faixas e seus intérpretes.  
 
 
 
